@@ -1,0 +1,260 @@
+/* === General Rules === */
+/* @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
+}
+body {
+  /* font-family: var(--font-family) !important; */
+  /* font-weight: 300; */
+  font-family: "Inter", sans-serif;
+}
+
+.rating-color {
+  color: var(--rating-color);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+.product {
+  border: solid 1px transparent;
+  overflow: hidden;
+}
+
+.product:hover {
+  box-shadow: var(--shadow);
+  border: solid 1px var(--main-color);
+}
+.product .btn {
+  transition: transform 0.5s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.btnHover {
+  background-color: var(--main-color) !important;
+  transition: 0.5s !important;
+}
+
+.btnHover:hover {
+  background-color: #0e830e !important;
+}
+
+.font-sm {
+  font-size: 15px;
+}
+.text-main {
+  color: var(--main-color);
+  transition: 0.2s;
+}
+
+.text-main:hover {
+  color: #000100;
+}
+
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+hr {
+  color: #c0bfbf;
+}
+
+/* === Custom Rules === */
+/* offlineMsg */
+.offlineMsg {
+  position: fixed !important;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 5px;
+}
+.owl-theme .owl-dots .owl-dot span {
+  height: 2px !important;
+}
+button:focus:not(:focus-visible) {
+  box-shadow: 0px 0px 4px 0px #ccc !important;
+}
+.fav-icon {
+  border: none !important;
+}
+.fav-icon i {
+  font-size: 20px;
+}
+
+/* === navbar === */
+.mainHeight {
+  min-height: calc(100vh - (58.49px + 335.6px));
+}
+/* navbar */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: #333 !important;
+  font-weight: 600;
+}
+/* shopCart */
+.shopCart i {
+  font-size: 17px;
+}
+.shopCart span {
+  transition: 0.2s;
+}
+.shopCart i:hover + span {
+  background-color: #198754 !important;
+}
+.shopCart span {
+  font-size: 11px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  left: 30px;
+  top: 3px;
+}
+
+/* products */
+.textSlice {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.product-price,
+.product-rating {
+  font-size: 0.9375rem;
+}
+.product-old-price {
+  opacity: 0.6;
+}
+.price-wrapper {
+  gap: 8px;
+}
+/* products pagination */
+.pageActive {
+  background-color: #cccccc49;
+}
+.pagination .page-item .page-link {
+  color: #198754 !important;
+  font-weight: 500 !important;
+}
+.addCartBtn {
+  font-size: 13px !important;
+}
+
+/* footer */
+.payment-logo img {
+  width: 50px;
+  margin: 0 10px;
+}
+.logo-store img {
+  width: 90px;
+  margin: 0 5px;
+}
+
+/* cart */
+.cartRow .row:not(:last-child) {
+  border-bottom: 1px solid #e2e2e2;
+}
+.cartRow > div {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* payment */
+.btnPayment {
+  width: 230px;
+}
+
+/* home */
+.home .static-banner img {
+  object-fit: cover;
+}
+
+/* sign in */
+.signin-form {
+  margin-bottom: 15px;
+  background: #f7f7f7;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12);
+  padding: 30px;
+}
+.signin-form h2 {
+  margin: 0 0 15px;
+  font-size: 28px;
+}
+.signin-form button {
+  font-size: 15px;
+}
+.signin-form i {
+  font-size: 15px;
+}
+.signin-form .social-btn .btn {
+  border: none;
+  margin: 10px 3px 0;
+  opacity: 1;
+}
+.signin-form .social-btn .btn:hover {
+  opacity: 0.9;
+}
+.signin-form .social-btn .btn-secondary,
+.signin-form .social-btn .btn-secondary:active {
+  background: #507cc0 !important;
+}
+.signin-form .social-btn .btn-info,
+.signin-form .social-btn .btn-info:active {
+  background: #64ccf1 !important;
+}
+.signin-form .social-btn .btn-danger,
+.signin-form .social-btn .btn-danger:active {
+  background: #df4930 !important;
+}
+.signin-form .or-seperator {
+  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+.signin-form .or-seperator span {
+  font-style: italic !important;
+  padding: 0 10px;
+  background: #f7f7f7;
+  position: relative;
+  top: -11px;
+  z-index: 1;
+}
+
+/* CategoriesBanners */
+.banner-h {
+  font-size: 25px;
+  font-weight: 600;
+}
+.banner-p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.banner-btn {
+  font-size: 14px;
+}
+
+/* our-vision */
+.our-vision .card-h {
+  font-size: 1.09375rem !important;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.our-vision .card-p {
+  font-size: 0.875rem;
+  color: #5c6c75;
+  font-weight: 500;
+}
